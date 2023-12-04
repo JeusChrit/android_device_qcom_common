@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -162,9 +162,15 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"481"|"455"|"496"|"548"|"598"|"599")
+	"481"|"455"|"496")
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-kona.sh
 		;;
+        "548")
+                /vendor/bin/sh /vendor/bin/init.kernel.post_boot-qcs7230.sh
+                ;;
+        "598"|"599")
+                /vendor/bin/sh /vendor/bin/init.kernel.post_boot-qrb3165.sh
+                ;;
 	*)
 		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
 		;;

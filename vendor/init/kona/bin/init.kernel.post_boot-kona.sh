@@ -185,11 +185,6 @@ do
 	echo 40 > $ddrbw/window_ms
 done
 
-for latfloor in $bus_dcvs/*/*latfloor
-do
-	echo 25000 > $latfloor/ipm_ceil
-done
-
 for l3gold in $bus_dcvs/L3/*gold
 do
 	echo 4000 > $l3gold/ipm_ceil
@@ -203,12 +198,6 @@ done
 for qosgold in $bus_dcvs/DDRQOS/*gold
 do
 	echo 50 > $qosgold/ipm_ceil
-done
-
-for ddrprime in $bus_dcvs/DDR/*prime
-do
-	echo 25 > $ddrprime/freq_scale_pct
-	echo 1881 > $ddrprime/freq_scale_limit_mhz
 done
 
 echo s2idle > /sys/power/mem_sleep
