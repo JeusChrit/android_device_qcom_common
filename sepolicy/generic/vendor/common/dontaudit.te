@@ -27,3 +27,7 @@ dontaudit hal_wifi_default persist_vendor_debug_wifi_prop:file r_file_perms;
 dontaudit kernel self:qipcrtr_socket create;
 dontaudit vdc self:capability kill;
 dontaudit vendor_hal_capabilityconfigstore_qti_default vendor_cap_configstore_dbg_prop:file r_file_perms;
+
+# Apps are no longer allowed open access to /dev/ashmem, unless they
+# target API level < Q.
+dontaudit untrusted_app ashmem_device:chr_file open;
