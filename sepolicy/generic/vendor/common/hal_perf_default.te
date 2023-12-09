@@ -4,6 +4,10 @@ allow vendor_hal_perf_default proc:dir search;
 allow vendor_hal_perf_default su:file r_file_perms;
 allow vendor_hal_perf_default su:dir search;
 
+allow vendor_hal_perf_default default_android_service:service_manager find;
+allow vendor_hal_perf_default hal_power_default:dir search;
+allow vendor_hal_perf_default surfaceflinger:dir search;
+
 r_dir_file(vendor_hal_perf_default, system_server)
 
 binder_call(vendor_hal_perf_default, vendor_hal_poweroptservice)
