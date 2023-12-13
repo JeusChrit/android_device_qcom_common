@@ -6,7 +6,7 @@ Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
 <AdvancedSfOffsetSetting>
     <DeviceSettingList>
-        <DefaultDevice version="1"/>
+        <DefaultDevice version="4"/>
         <Device version="1">
             <FpsOffsetMap fps="90" SfDurationPercentage="136"/>
             <FpsOffsetMap fps="120" SfDurationPercentage="148"/>
