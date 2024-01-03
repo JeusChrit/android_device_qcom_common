@@ -1,8 +1,6 @@
 allow vendor_hal_perf_default sysfs:file { read write open };
 allow vendor_hal_perf_default proc:file r_file_perms;
 allow vendor_hal_perf_default proc:dir search;
-allow vendor_hal_perf_default su:file r_file_perms;
-allow vendor_hal_perf_default su:dir search;
 
 allow vendor_hal_perf_default hal_power_default:dir search;
 allow vendor_hal_perf_default surfaceflinger:dir search;
