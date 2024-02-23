@@ -55,7 +55,8 @@ on boot
 
 on property:vendor.post_boot.parsed=1
     # Set background cpuset
-    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0
 
     # Set audio-app cpuset
     write /dev/cpuset/audio-app/cpus 1-2
