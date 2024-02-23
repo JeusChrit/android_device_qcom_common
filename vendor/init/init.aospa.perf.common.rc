@@ -59,6 +59,9 @@ on property:vendor.post_boot.parsed=1
 
     # Set audio-app cpuset
     write /dev/cpuset/audio-app/cpus 1-2
+    
+    # Setup foreground cpuset for display composer.
+    write /dev/cpuset/foreground/cpus 0-7
 
     # Set restricted cpuset to the same CPUs as system-background
     copy /dev/cpuset/system-background/cpus /dev/cpuset/restricted/cpus
