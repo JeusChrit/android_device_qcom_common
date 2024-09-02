@@ -33,8 +33,6 @@ else # >= 5.10
 # Include QTI AIDL Lights HAL for 5.10
 -include vendor/qcom/opensource/lights/lights-vendor-product.mk
 
-endif # >= 5.10
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
